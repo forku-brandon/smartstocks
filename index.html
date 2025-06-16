@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 
-<!-- Mirrored from prolex.themetags.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Jun 2025 15:24:16 GMT -->
 
 <head>
     <meta charset="utf-8">
@@ -23,7 +22,7 @@
     <meta property="og:type" content="article" />
 
     <!--title-->
-    <title>Smartstpcks</title>
+    <title>Smartstocks</title>
 
     <!--favicon icon-->
     <link rel="icon" href="img/logo.png" type="image/png" sizes="16x16">
@@ -51,7 +50,171 @@
     <link rel="stylesheet" href="css/style.css">
     <!--responsive css-->
     <link rel="stylesheet" href="css/responsive.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+    <style>
+        .contact-us {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .contact-info .media {
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info .icon-md {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .form-control-lg {
+            padding: 0.75rem 1rem;
+            border-radius: 0.375rem;
+            border: 1px solid #dee2e6;
+        }
+
+        .form-control-lg:focus {
+            border-color: #eb1c31;
+            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+        }
+
+        .btn-lg {
+            padding: 0.75rem 2rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .shadow {
+            box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08) !important;
+        }
+
+        .rounded-lg {
+            border-radius: 0.5rem !important;
+        }
+
+
+        /* Custom fade effects */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+        }
+
+        /* Smooth page transitions */
+        body {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
+    <style>
+        .footer-section {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Social Icons */
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: #dc3545;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* Links */
+        .footer-links a,
+        .footer-contact a {
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover,
+        .footer-contact a:hover {
+            color: #fff !important;
+            padding-left: 5px;
+            opacity: 1 !important;
+        }
+
+        /* Headings */
+        .footer-nav-wrap h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-nav-wrap h5:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background: #dc3545;
+        }
+
+        /* Contact Icons */
+        .footer-contact i {
+            width: 20px;
+            text-align: center;
+            color: #dc3545;
+        }
+
+        /* Legal Links */
+        .legal-links a {
+            transition: all 0.3s ease;
+        }
+
+        .legal-links a:hover {
+            color: #dc3545 !important;
+        }
+    </style>
+
+    <style>
+        .download-now-btn {
+            background-color: #000;
+            color: whitesmoke;
+            border: 2px solid #000;
+            padding: 9px 35px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .download-now-btn:hover {
+            background-color: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -63,7 +226,7 @@
             <div class="container">
 
                 <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="40" alt="logo"
-                        class="img-fluid">
+                        class="img-fluid animation-one">
                     <span style="color: rgb(230, 16, 16);" class="h3 fw-bold">Smart</span><SPan
                         class="h3 text-white">stocks</SPan>
                 </a>
@@ -97,7 +260,7 @@
                             <a class="nav-link page-scroll" href="#specs">Specs</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link page-scroll" href="#product">Product</a>
+                            <a class="nav-link page-scroll" href="#testimonial">Reviews</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll" href="#faq">Faq</a>
@@ -117,44 +280,74 @@
     <!--body content wrap start-->
     <div class="main">
         <!--hero section start-->
-        <section class="hero-section ptb-100 background-img"
+
+        <section class="hero-section ptb-100 background-img "
             style="background: url('img/hero-bg-3.jpg')no-repeat center center / cover">
             <div class="container">
+                
+                <!--animated circle shape start-->
+                <div class="circles">
+                    <div class="point animated-point-1"></div>
+                    <div class="point animated-point-2"></div>
+                    <div class="point animated-point-3"></div>
+                    <div class="point animated-point-4"></div>
+                    <div class="point animated-point-5"></div>
+                    <div class="point animated-point-6"></div>
+                    <div class="point animated-point-7"></div>
+                    <div class="point animated-point-8"></div>
+                    <div class="point animated-point-9"></div>
+                </div>
+                <div class="circles">
+                    <div class="point animated-point-1"></div>
+                    <div class="point animated-point-2"></div>
+                    <div class="point animated-point-3"></div>
+                    <div class="point animated-point-4"></div>
+                    <div class="point animated-point-5"></div>
+                    <div class="point animated-point-6"></div>
+                    <div class="point animated-point-7"></div>
+                    <div class="point animated-point-8"></div>
+                    <div class="point animated-point-9"></div>
+                </div>
+                <!--animated circle shape end-->
                 <div class="row justify-content-center text-center py-4">
-                    <div class="col-md-10 col-lg-8">
+                    <div class="col-md-10 col-lg-8" data-aos="fade-up" data-aos-duration="1000">
                         <div class="hero-content text-white">
-                            <h1 class="text-white mb-4"> <span style="color: brown;">Your Smart</span> Investment
-                                Partner</h1>
+                            <h1 class="text-white mb-4 "><span style="color: brown;">SmartStocks</span> - Smarter
+                                Business Management</h1>
                             <p class="lead mb-5">
-                                Powerful stock analysis tools and portfolio tracking<br>
-                                to help you make informed investment decisions.
+                                Complete inventory and sales tracking solution<br>
+                                to streamline your daily business operations and boost profits.
                             </p>
                             <!--core feature list start-->
                             <div class="d-flex justify-content-center mb-5">
                                 <ul class="list-inline core-feature-list">
                                     <li class="list-inline-item text-center mx-4">
                                         <div class="icon-box mb-2 mx-auto gray-light-bg">
-                                            <span class="ti-bar-chart color-secondary"></span>
+                                            <span class="ti-package color-secondary"></span>
                                         </div>
-                                        Market Analytics
+                                        Inventory Control
                                     </li>
                                     <li class="list-inline-item text-center mx-4">
                                         <div class="icon-box mb-2 mx-auto gray-light-bg">
-                                            <span class="ti-pie-chart color-secondary"></span>
+                                            <span class="ti-money color-secondary"></span>
                                         </div>
-                                        Portfolio Insights
+                                        Sales Tracking
                                     </li>
                                     <li class="list-inline-item text-center mx-4">
                                         <div class="icon-box mb-2 mx-auto gray-light-bg">
                                             <span class="ti-alert color-secondary"></span>
                                         </div>
-                                        Smart Alerts
+                                        Stock Alerts
                                     </li>
                                 </ul>
                             </div>
                             <!--core feature list end-->
                             <div class="mt-4">
-                                <a href="#features" class="btn secondary-btn">Explore Features</a>
+                                <!-- <a href="#download" class="btn download-now-btn mr-3">Download Now</a>
+                                <a href="#features" class="btn secondary-btn">See How It Works</a> -->
+                                <a href="#" class="btn app-store-btn w-50"><span class="ti-download"></span> Download
+                                    Software</a>
+
                             </div>
                         </div>
                     </div>
@@ -162,77 +355,81 @@
             </div>
         </section>
         <!--hero section end-->
-        <!--promo section start-->
+
+        <!--services section start-->
         <section class="promo-section ptb-100">
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1000">
                     <div class="col-lg-7 col-md-8">
                         <div class="section-heading text-center mb-5">
-                            <h2>Powerful Tools for <span>Smart</span> Investors</h2>
+                            <h2>Smart Tools for <span>Smarter</span> Businesses</h2>
                             <p class="lead">
-                                Discover how SmartStocks gives you the edge in today's competitive markets
+                                Discover how SmartStocks simplifies inventory and sales management for retailers
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="row equal">
+                <div class="row equal animation-one" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-md-3 col-lg-3 col-sm-6">
+                        <div
+                            class="single-promo single-promo-hover single-promo-1 rounded text-center white-bg py-4 px-3 h-100">
+                            <div class="circle-icon mb-2">
+                                <span class="ti-package"></span>
+                            </div>
+                            <h5>Inventory Control</h5>
+                            <p class="mb-0">Track stock levels in real-time with automatic low-quantity alerts and
+                                barcode support.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-6">
+                        <div
+                            class="single-promo single-promo-hover single-promo-1 rounded text-center white-bg py-4 px-3 h-100">
+                            <div class="circle-icon mb-2">
+                                <span class="ti-money"></span>
+                            </div>
+                            <h5>Sales Management</h5>
+                            <p class="mb-0">Process transactions, print receipts, and track customer purchases with our
+                                POS system.</p>
+                        </div>
+                    </div>
                     <div class="col-md-3 col-lg-3 col-sm-6">
                         <div
                             class="single-promo single-promo-hover single-promo-1 rounded text-center white-bg py-4 px-3 h-100">
                             <div class="circle-icon mb-2">
                                 <span class="ti-bar-chart"></span>
                             </div>
-                            <h5>Real-Time Analytics</h5>
-                            <p class="mb-0">Track market movements with up-to-the-minute data and technical indicators.
-                            </p>
+                            <h5>Financial Reports</h5>
+                            <p class="mb-0">Generate profit/loss statements and analyze sales trends with automated
+                                reporting.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-lg-3 col-sm-6">
                         <div
                             class="single-promo single-promo-hover single-promo-1 rounded text-center white-bg py-4 px-3 h-100">
                             <div class="circle-icon mb-2">
-                                <span class="ti-wallet"></span>
+                                <span class="ti-cloud"></span>
                             </div>
-                            <h5>Portfolio Tracking</h5>
-                            <p class="mb-0">Monitor all your investments in one place with comprehensive performance
-                                metrics.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-lg-3 col-sm-6">
-                        <div
-                            class="single-promo single-promo-hover single-promo-1 rounded text-center white-bg py-4 px-3 h-100">
-                            <div class="circle-icon mb-2">
-                                <span class="ti-alert"></span>
-                            </div>
-                            <h5>Custom Alerts</h5>
-                            <p class="mb-0">Get notified about price movements, news, and important market events.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-lg-3 col-sm-6">
-                        <div
-                            class="single-promo single-promo-hover single-promo-1 rounded text-center white-bg py-4 px-3 h-100">
-                            <div class="circle-icon mb-2">
-                                <span class="ti-lock"></span>
-                            </div>
-                            <h5>Secure Platform</h5>
-                            <p class="mb-0">Bank-level encryption protects your financial data and transactions.</p>
+                            <h5>Hybrid System</h5>
+                            <p class="mb-0">Work offline when needed and sync data automatically when internet is
+                                available.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--promo section end-->
+        <!--services section end-->
 
         <!--about us section start-->
         <section id="about" class="about-us ptb-100 gray-light-bg">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
-                    <div class="col-md-6">
+                    <div class="col-md-6" data-aos="fade-up" data-aos-duration="1000">
                         <div class="about-content-left">
                             <div class="section-heading">
-                                <h2>Smart Investing <span>Made Simple</span></h2>
-                                <p class="mb-4">SmartStocks provides powerful yet intuitive tools to help investors of
-                                    all levels make better decisions and grow their portfolios with confidence.</p>
+                                <h2>Retail Management <span>Made Simple</span></h2>
+                                <p class="mb-4">SmartStocks provides powerful yet intuitive inventory and sales
+                                    management tools to help retailers streamline operations, track stock, and boost
+                                    profits with confidence.</p>
                             </div>
                             <ul class="list-unstyled">
                                 <li class="py-2">
@@ -243,7 +440,7 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <p class="mb-0">Real-time market data and analytics</p>
+                                            <p class="mb-0">Real-time inventory tracking with barcode support</p>
                                         </div>
                                     </div>
                                 </li>
@@ -255,7 +452,7 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <p class="mb-0">Comprehensive portfolio tracking</p>
+                                            <p class="mb-0">Complete point-of-sale system with receipt printing</p>
                                         </div>
                                     </div>
                                 </li>
@@ -267,7 +464,7 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <p class="mb-0">Customizable alerts and notifications</p>
+                                            <p class="mb-0">Automated low-stock alerts and reorder points</p>
                                         </div>
                                     </div>
                                 </li>
@@ -279,7 +476,7 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <p class="mb-0">Secure, encrypted data protection</p>
+                                            <p class="mb-0">Detailed sales reports and profit/loss statements</p>
                                         </div>
                                     </div>
                                 </li>
@@ -291,17 +488,18 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <p class="mb-0">Multi-platform compatibility</p>
+                                            <p class="mb-0">Hybrid system works both online and offline</p>
                                         </div>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
                         <div
-                            class="about-content-right d-flex justify-content-center justify-content-lg-end justify-content-md-end">
-                            <img src="img/contact-here.png" alt="SmartStocks dashboard" class="img-fluid h-100">
+                            class="about-content-right animation-three d-flex justify-content-center justify-content-lg-end justify-content-md-end">
+                            <img src="img/contact-here.png" alt="SmartStocks inventory management dashboard"
+                                class="img-fluid h-100 ">
                         </div>
                     </div>
                 </div>
@@ -313,39 +511,38 @@
         <section id="features" class="feature-section ptb-100">
             <div class="container">
                 <div class="row justify-content-between align-items-center">
-                    <div class="col-md-4 col-lg-4">
+                    <div class="col-md-4 col-lg-4 animation-one" data-aos="fade-right" data-aos-duration="1000">
                         <div class="image-wrap">
-                            <img src="img/feature.png" alt="SmartStocks Analytics Dashboard" class="img-fluid">
+                            <img src="img/feature.png" alt="SmartStocks Inventory Dashboard" class="img-fluid">
                         </div>
                     </div>
-                    <div class="col-lg-7 col-md-7">
+                    <div class="col-lg-7 col-md-7 " data-aos="fade-left" data-aos-duration="1000">
                         <div class="feature-contents section-heading">
                             <h2>SmartStocks <span>Core</span> Features</h2>
 
                             <div class="feature-content-wrap">
                                 <div class="tab-content feature-tab-content">
                                     <div class="tab-pane active" id="tab6-1">
-                                        <p>Track your portfolio's performance with real-time analytics and comprehensive
-                                            stock metrics.</p>
-                                        <p>Monitor key indicators including P/E ratios, dividend yields, and 52-week
-                                            performance trends.</p>
+                                        <p>Manage your inventory with real-time tracking and automatic stock level
+                                            updates.</p>
+                                        <p>Monitor product quantities, low-stock alerts, and reorder points for optimal
+                                            inventory control.</p>
                                     </div>
                                     <div class="tab-pane" id="tab6-2">
-                                        <p>Analyze market volatility and assess risk exposure across your investment
-                                            portfolio.</p>
-                                        <p>Identify potential risks with our proprietary risk assessment algorithms.</p>
+                                        <p>Process sales transactions quickly with our integrated point-of-sale system.
+                                        </p>
+                                        <p>Generate professional receipts and track customer purchases with detailed
+                                            records.</p>
                                     </div>
                                     <div class="tab-pane" id="tab6-3">
-                                        <p>Receive instant price alerts and trading signals based on your custom
-                                            parameters.</p>
-                                        <p>Set notifications for price movements, volume changes, and technical
-                                            indicators.</p>
+                                        <p>Analyze sales performance and profitability with comprehensive business
+                                            reports.</p>
+                                        <p>Identify best-selling products, seasonal trends, and revenue patterns.</p>
                                     </div>
                                     <div class="tab-pane" id="tab6-4">
-                                        <p>Secure your investment data with enterprise-grade encryption and
-                                            authentication.</p>
-                                        <p>Your portfolio information remains protected with bank-level security
-                                            measures.</p>
+                                        <p>Work seamlessly with our hybrid system that operates both online and offline.
+                                        </p>
+                                        <p>Data syncs automatically when internet connection is restored.</p>
                                     </div>
                                 </div>
                                 <ul class="nav nav-tabs feature-tab feature-tab-circle" data-tabs="tabs">
@@ -353,25 +550,25 @@
                                         <a class="active h6" href="#tab6-1" data-toggle="tab">
                                             <span class="flaticon-cardiogram"></span>
                                         </a>
-                                        Portfolio Analytics
+                                        Inventory Control
                                     </li>
                                     <li class="nav-item">
                                         <a class="h6" href="#tab6-2" data-toggle="tab">
                                             <span class="flaticon-blood-pressure"></span>
                                         </a>
-                                        Risk Assessment
+                                        POS System
                                     </li>
                                     <li class="nav-item">
                                         <a class="h6" href="#tab6-3" data-toggle="tab">
                                             <span class="flaticon-bell"></span>
                                         </a>
-                                        Trading Alerts
+                                        Business Reports
                                     </li>
                                     <li class="nav-item">
                                         <a class="h6" href="#tab6-4" data-toggle="tab">
                                             <span class="flaticon-hand-finger-pressing-a-circular-ring-button"></span>
                                         </a>
-                                        Data Protection
+                                        Hybrid Operation
                                     </li>
                                 </ul>
                             </div>
@@ -385,26 +582,26 @@
         <!--promo section start-->
         <section class="promo-section ptb-100">
             <div class="container">
-                <div class="row">
+                <div class="row" data-aos="fade-up" data-aos-duration="1000">
                     <div class="col-lg-6 col-md-10">
                         <div class="section-heading mb-5 mb-md-0 mb-lg-5">
                             <span class="badge badge-custom-secondary badge-pill">Key features</span>
-                            <p class="lead mt-3">We will helps you to build beautiful websites that stand out and
-                                automatically adapt to your style.</p>
+                            <p class="lead mt-3">SmartStocks helps retailers manage inventory and sales with powerful,
+                                easy-to-use tools that adapt to your business needs.</p>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row animation-one" data-aos="fade-up" data-aos-duration="1000">
                     <div class="col-lg-3 col-sm-6">
                         <div class="card single-promo-card single-promo-hover mt-sm-0 mt-md-4 mt-lg-0">
                             <div class="card-body">
                                 <div class="pb-2">
-                                    <span class="ti-vector icon-md color-secondary"></span>
+                                    <span class="ti-package icon-md color-secondary"></span>
                                 </div>
                                 <div class="pt-2 pb-3">
-                                    <h5>Clean Design</h5>
-                                    <p class="text-muted mb-0">All components are built to be used in any combination.
-                                    </p>
+                                    <h5>Inventory Tracking</h5>
+                                    <p class="text-muted mb-0">Real-time stock monitoring with barcode support and
+                                        low-stock alerts.</p>
                                 </div>
                             </div>
                         </div>
@@ -413,11 +610,12 @@
                         <div class="card single-promo-card single-promo-hover mt-sm-0 mt-md-4 mt-lg-0">
                             <div class="card-body">
                                 <div class="pb-2">
-                                    <span class="ti-alert icon-md color-secondary"></span>
+                                    <span class="ti-printer icon-md color-secondary"></span>
                                 </div>
                                 <div class="pt-2 pb-3">
-                                    <h5>Notification Alert</h5>
-                                    <p class="text-muted mb-0">Quick is optimized to work for most devices.</p>
+                                    <h5>POS System</h5>
+                                    <p class="text-muted mb-0">Complete sales processing with receipt printing and
+                                        customer records.</p>
                                 </div>
                             </div>
                         </div>
@@ -426,11 +624,12 @@
                         <div class="card single-promo-card single-promo-hover mt-sm-0 mt-md-4 mt-lg-0">
                             <div class="card-body">
                                 <div class="pb-2">
-                                    <span class="ti-lock icon-md color-secondary"></span>
+                                    <span class="ti-bar-chart icon-md color-secondary"></span>
                                 </div>
                                 <div class="pt-2 pb-3">
-                                    <h5>Secure Data</h5>
-                                    <p class="text-muted mb-0">Remain consistent while developing new features.</p>
+                                    <h5>Sales Reports</h5>
+                                    <p class="text-muted mb-0">Detailed analytics on product performance and
+                                        profitability.</p>
                                 </div>
                             </div>
                         </div>
@@ -439,11 +638,12 @@
                         <div class="card single-promo-card single-promo-hover mt-sm-0 mt-md-4 mt-lg-0">
                             <div class="card-body">
                                 <div class="pb-2">
-                                    <span class="ti-headphone-alt icon-md color-secondary"></span>
+                                    <span class="ti-cloud icon-md color-secondary"></span>
                                 </div>
                                 <div class="pt-2 pb-3">
-                                    <h5>User Live Chat</h5>
-                                    <p class="text-muted mb-0">Change a few variables and the whole theme adapts.</p>
+                                    <h5>Hybrid System</h5>
+                                    <p class="text-muted mb-0">Works offline and syncs automatically when internet is
+                                        available.</p>
                                 </div>
                             </div>
                         </div>
@@ -459,64 +659,59 @@
             <div class="container">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-lg-12">
-                        <div class="section-heading">
-                            <h2><span>Technical</span> Requirements</h2>
+                        <div class="section-heading" data-aos="fade-left" data-aos-duration="1000">
+                            <h2><span>Technical</span> Specifications</h2>
                             <p class="lead">
-                                SmartStocks delivers professional-grade investment tools with robust technical
-                                specifications
-                                for seamless performance.
+                                SmartStocks delivers professional inventory management tools with robust technical
+                                requirements for retail operations.
                             </p>
                         </div>
-                        <div class="row justify-content-between">
+                        <div class="row justify-content-between" data-aos="fade-up" data-aos-duration="1000">
                             <div class="col-md-5">
                                 <div class="tech-feature-single mt-5">
                                     <div class="tech-feature-title">
-                                        <span class="color-secondary ti-camera icon-md d-block mb-3"></span>
-                                        <h5 class="mb-2">Data Visualization</h5>
+                                        <span class="color-secondary ti-package icon-md d-block mb-3"></span>
+                                        <h5 class="mb-2">Inventory Tracking</h5>
                                     </div>
-                                    <p>Clear, interactive charts and graphs to visualize market trends and portfolio
-                                        performance.</p>
+                                    <p>Real-time stock monitoring with barcode/QR support and automated quantity
+                                        updates.</p>
                                 </div>
                                 <div class="tech-feature-single mt-5">
                                     <div class="tech-feature-title">
-                                        <span class="color-secondary ti-settings icon-md d-block mb-3"></span>
-                                        <h5 class="mb-2">Customizable Interface</h5>
+                                        <span class="color-secondary ti-printer icon-md d-block mb-3"></span>
+                                        <h5 class="mb-2">POS Integration</h5>
                                     </div>
-                                    <p>Personalize your dashboard and analytics views to match your investment strategy.
-                                    </p>
+                                    <p>Seamless point-of-sale system with receipt printing and customer management.</p>
                                 </div>
                                 <div class="tech-feature-single mt-5">
                                     <div class="tech-feature-title">
-                                        <span class="color-secondary ti-video-camera icon-md d-block mb-3"></span>
-                                        <h5 class="mb-2">Market Streaming</h5>
+                                        <span class="color-secondary ti-cloud icon-md d-block mb-3"></span>
+                                        <h5 class="mb-2">Hybrid Operation</h5>
                                     </div>
-                                    <p>Real-time market data feeds with minimal latency for up-to-the-second decision
-                                        making.</p>
+                                    <p>Works offline with automatic cloud sync when internet connection is restored.</p>
                                 </div>
                             </div>
                             <div class="col-md-5">
                                 <div class="tech-feature-single mt-5">
                                     <div class="tech-feature-title">
-                                        <span class="color-secondary ti-thought icon-md d-block mb-3"></span>
-                                        <h5 class="mb-2">AI Analysis</h5>
+                                        <span class="color-secondary ti-bar-chart icon-md d-block mb-3"></span>
+                                        <h5 class="mb-2">Sales Analytics</h5>
                                     </div>
-                                    <p>Smart algorithms that analyze market patterns and suggest potential
-                                        opportunities.</p>
+                                    <p>Comprehensive reporting on sales performance, profits, and product trends.</p>
                                 </div>
                                 <div class="tech-feature-single mt-5">
                                     <div class="tech-feature-title">
-                                        <span class="color-secondary ti-server icon-md d-block mb-3"></span>
-                                        <h5 class="mb-2">Cloud Sync</h5>
+                                        <span class="color-secondary ti-user icon-md d-block mb-3"></span>
+                                        <h5 class="mb-2">Multi-User Access</h5>
                                     </div>
-                                    <p>Automatic synchronization across all your devices with secure cloud storage.</p>
+                                    <p>Role-based permissions for staff with secure local network operation.</p>
                                 </div>
                                 <div class="tech-feature-single mt-5">
                                     <div class="tech-feature-title">
-                                        <span class="color-secondary ti-rss-alt icon-md d-block mb-3"></span>
-                                        <h5 class="mb-2">API Connectivity</h5>
+                                        <span class="color-secondary ti-harddrives icon-md d-block mb-3"></span>
+                                        <h5 class="mb-2">System Requirements</h5>
                                     </div>
-                                    <p>Integrate with major brokerages and financial data providers for seamless data
-                                        flow.</p>
+                                    <p>Windows/macOS/Linux | 4GB RAM minimum | 500MB storage | LAN compatible</p>
                                 </div>
                             </div>
                         </div>
@@ -531,23 +726,21 @@
             style="background: url('img/scalling.jpg')no-repeat center center / cover">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
-                    <div class="col-md-12 col-lg-12">
+                    <div class="col-md-12 col-lg-12" data-aos="fade-in" data-aos-duration="1000">
                         <div class="download-content text-white section-heading">
-                            <h2 class="text-white"><span>Download</span> our Software </h2>
-                            <p class="lead">Objectively deliver professional value with diverse web-readiness.
-                                Collaboratively transition wireless customer service without goal-oriented catalysts for
-                                change. Globally actualize viral products via ubiquitous data. Authoritatively
-                                productize intermandated processes through superior services.
+                            <h2 class="text-white"><span>Get</span> SmartStocks Now</h2>
+                            <p class="lead">Transform your retail business with our powerful inventory management
+                                solution. SmartStocks helps you track stock, manage sales, and analyze performance - all
+                                in one easy-to-use platform designed specifically for retailers and small businesses.
                             </p>
 
                             <div class="download-btn pt-2">
-                                <a href="#" class="btn google-play-btn mr-3"><span class="ti-android"></span> Google
-                                    Play</a>
-                                <a href="#" class="btn app-store-btn"><span class="ti-apple"></span> App Store</a>
+                                <a href="#" class="btn google-play-btn mr-3"><span class="ti-windows"></span>
+                                    Windows</a>
+                                <a href="#" class="btn app-store-btn"><span class="ti-linux"></span> Linux</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -660,8 +853,9 @@
         <!--products section end-->
 
         <!--testimonial section start-->
-        <section class="imageblock-section switchable switchable-content gray-light-bg">
-            <div class="imageblock-section-img overlay-color col-lg-6 col-md-6 d-flex align-items-center">
+        <section class="imageblock-section switchable switchable-content gray-light-bg" id="testimonial">
+            <div class="imageblock-section-img overlay-color col-lg-6 col-md-6 d-flex align-items-center"
+                data-aos="fade-left" data-aos-duration="1000">
                 <div class="background-image-holder"
                     style="background: url('img/scaling.jpg')no-repeat center center / cover; opacity: 1;"></div>
                 <div class="counter-new-wrap">
@@ -669,41 +863,41 @@
                         <li class="list-inline-item">
                             <div class="single-counter">
                                 <i class="ti-face-smile icon-md mb-3 d-block"></i>
-                                <span>2350</span>
-                                <h6>Happy Client</h6>
+                                <span>850</span>
+                                <h6>Happy Retailers</h6>
                             </div>
                         </li>
                         <li class="list-inline-item">
                             <div class="single-counter">
-                                <i class="ti-download icon-md mb-3 d-block"></i>
-                                <span>2150</span>
-                                <h6>App Download</h6>
+                                <i class="ti-package icon-md mb-3 d-block"></i>
+                                <span>1.2M</span>
+                                <h6>Products Managed</h6>
                             </div>
                         </li>
                         <li class="list-inline-item">
                             <div class="single-counter">
-                                <i class="ti-user icon-md mb-3 d-block"></i>
-                                <span>2350</span>
-                                <h6>Clients satisfaction</h6>
+                                <i class="ti-printer icon-md mb-3 d-block"></i>
+                                <span>650K</span>
+                                <h6>Receipts Printed</h6>
                             </div>
                         </li>
                         <li class="list-inline-item">
                             <div class="single-counter">
-                                <i class="ti-cup icon-md mb-3 d-block"></i>
-                                <span>2250</span>
-                                <h6>Awards win</h6>
+                                <i class="ti-bar-chart icon-md mb-3 d-block"></i>
+                                <span>98%</span>
+                                <h6>Satisfaction Rate</h6>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="container-fluid">
+            <div class="container-fluid" data-aos="fade-right" data-aos-duration="1000">
                 <div class="row">
                     <div class="col-lg-6 col-md-5">
                         <!--sports modes start-->
                         <div class="row align-items-center justify-content-center ptb-100">
                             <div class="col-lg-8 section-heading text-center mb-3">
-                                <h2>Our lovely <span>Customers</span> say</h2>
+                                <h2>What Our <span>Clients</span> Say</h2>
                             </div>
                             <div class="col-lg-8">
                                 <div class="owl-carousel owl-theme client-testimonial-1 arrow-indicator">
@@ -711,17 +905,15 @@
                                         <div class="testimonial-quote-wrap text-center">
                                             <div class="client-say">
                                                 <p class="lead"><img src="img/quote.png" alt="quote" class="img-fluid">
-                                                    Interactively optimize
-                                                    fully researched expertise vis-a-vis plug-and-play relationships.
-                                                    Intrinsicly
-                                                    develop viral core competencies for fully tested customer service.
-                                                    Enthusiastically create next-generation growth strategies and.</p>
+                                                    SmartStocks transformed our inventory management completely. We
+                                                    reduced stockouts by 80% and improved our inventory turnover. The
+                                                    barcode scanning feature saves us hours every week!</p>
                                             </div>
                                             <div class="author-info py-3">
                                                 <img src="img/client-1.jpg" alt="client"
                                                     class="img-fluid rounded-circle">
-                                                <h5 class="mb-0">John Charles</h5>
-                                                <span>AppCo</span>
+                                                <h5 class="mb-0">Samuel Nfor</h5>
+                                                <span>Nfor Supermarket, Bamenda</span>
                                             </div>
                                         </div>
                                     </div>
@@ -729,19 +921,15 @@
                                         <div class="testimonial-quote-wrap text-center">
                                             <div class="client-say">
                                                 <p class="lead"><img src="img/quote.png" alt="quote" class="img-fluid">
-                                                    Rapidiously
-                                                    develop user
-                                                    friendly growth strategies after extensive initiatives. Conveniently
-                                                    grow
-                                                    innovative benefits through fully tested deliverables. Rapidiously
-                                                    utilize
-                                                    focused platforms through end-to-end schemas.</p>
+                                                    The POS system is incredibly reliable, even during power outages
+                                                    thanks to the offline mode. Our sales tracking is now accurate and
+                                                    the profit reports help us make better buying decisions.</p>
                                             </div>
                                             <div class="author-info py-3">
                                                 <img src="img/client-2.jpg" alt="client"
                                                     class="img-fluid rounded-circle">
-                                                <h5 class="mb-0">Arabella Ora</h5>
-                                                <span>BizBite</span>
+                                                <h5 class="mb-0">Amina Bello</h5>
+                                                <span>Bello Pharmacy, Douala</span>
                                             </div>
                                         </div>
                                     </div>
@@ -749,20 +937,15 @@
                                         <div class="testimonial-quote-wrap text-center">
                                             <div class="client-say">
                                                 <p class="lead"><img src="img/quote.png" alt="quote" class="img-fluid">
-                                                    Objectively
-                                                    synthesize
-                                                    client-centered e-tailers for maintainable channels. Holisticly
-                                                    administrate
-                                                    customer directed vortals whereas tactical functionalities.
-                                                    Energistically
-                                                    monetize reliable imperatives through client-centric best practices.
-                                                    Collaboratively.</p>
+                                                    As a restaurant owner, the ingredient tracking feature has been
+                                                    invaluable. We've reduced food waste by 40% and our stock takes that
+                                                    used to take hours now take minutes.</p>
                                             </div>
                                             <div class="author-info py-3">
                                                 <img src="img/client-3.jpg" alt="client"
                                                     class="img-fluid rounded-circle">
-                                                <h5 class="mb-0">Jeremy Jere</h5>
-                                                <span>Themetags</span>
+                                                <h5 class="mb-0">Jean Dubois</h5>
+                                                <span>Le Bon Appétit, Yaoundé</span>
                                             </div>
                                         </div>
                                     </div>
@@ -770,19 +953,15 @@
                                         <div class="testimonial-quote-wrap text-center">
                                             <div class="client-say">
                                                 <p class="lead"><img src="img/quote.png" alt="quote" class="img-fluid">
-                                                    Enthusiastically innovate
-                                                    B2C data without clicks-and-mortar convergence. Monotonectally
-                                                    deliver
-                                                    compelling testing procedures vis-a-vis B2B testing procedures.
-                                                    Competently
-                                                    evisculate integrated resources whereas global processes.
-                                                    Enthusiastically.</p>
+                                                    The multi-user access lets my staff process sales while I manage
+                                                    inventory simultaneously. The system is simple enough for my
+                                                    employees but has all the features I need as the owner.</p>
                                             </div>
                                             <div class="author-info py-3">
                                                 <img src="img/client-4.jpg" alt="client"
                                                     class="img-fluid rounded-circle">
-                                                <h5 class="mb-0">John Charles</h5>
-                                                <span>AppCo</span>
+                                                <h5 class="mb-0">Fatima Abubakar</h5>
+                                                <span>City Fashion Boutique, Garoua</span>
                                             </div>
                                         </div>
                                     </div>
@@ -796,30 +975,32 @@
             </div>
         </section>
         <!--testimonial section end-->
+
+
         <!--faq section start-->
         <section id="faq" class="faq-section ptb-100">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
-
                     <div class="col-md-12">
-                        <div class="section-heading mb-4">
+                        <div class="section-heading mb-4" data-aos="fade-up" data-aos-duration="1000">
                             <h2>Frequently Asked <span>Questions</span></h2>
                         </div>
-                        <div id="accordion-1" class="accordion accordion-faq">
+                        <div id="accordion-1" class="accordion accordion-faq" data-aos="fade-up"
+                            data-aos-duration="1000">
                             <!-- Accordion card 1 -->
                             <div class="card">
                                 <div class="card-header py-3 primary-bg" id="heading-1-1" data-toggle="collapse"
                                     role="button" data-target="#collapse-1-1" aria-expanded="true"
                                     aria-controls="collapse-1-1">
-                                    <h6 class="mb-0 text-white"><span class="mr-3 color-secondary">01</span> What
-                                        markets does SmartStocks support?</h6>
+                                    <h6 class="mb-0 text-white"><span class="mr-3 color-secondary">01</span> What types
+                                        of businesses is SmartStocks designed for?</h6>
                                 </div>
                                 <div id="collapse-1-1" class="collapse show" aria-labelledby="heading-1-1"
                                     data-parent="#accordion-1">
                                     <div class="card-body">
-                                        <p>SmartStocks currently supports all major US stock exchanges (NYSE, NASDAQ)
-                                            and cryptocurrency markets. We're continuously adding support for
-                                            international markets and additional asset classes.</p>
+                                        <p>SmartStocks is perfect for retail stores, supermarkets, pharmacies,
+                                            restaurants, and wholesalers. Our system adapts to manage any type of
+                                            physical inventory, from clothing to perishable goods.</p>
                                     </div>
                                 </div>
                             </div>
@@ -828,16 +1009,16 @@
                                 <div class="card-header py-3 primary-bg" id="heading-1-2" data-toggle="collapse"
                                     role="button" data-target="#collapse-1-2" aria-expanded="false"
                                     aria-controls="collapse-1-2">
-                                    <h6 class="mb-0 text-white"><span class="mr-3 color-secondary">02</span> How do I
-                                        connect my brokerage account?
+                                    <h6 class="mb-0 text-white"><span class="mr-3 color-secondary">02</span> Does
+                                        SmartStocks work offline?
                                     </h6>
                                 </div>
                                 <div id="collapse-1-2" class="collapse" aria-labelledby="heading-1-2"
                                     data-parent="#accordion-1">
                                     <div class="card-body">
-                                        <p>You can securely connect most major brokerage accounts via API or manually
-                                            import your portfolio. We support TD Ameritrade, E*TRADE, Fidelity, and more
-                                            with read-only access for security.</p>
+                                        <p>Yes! SmartStocks has full offline functionality. All your sales and inventory
+                                            changes are recorded locally and automatically sync when internet connection
+                                            is restored.</p>
                                     </div>
                                 </div>
                             </div>
@@ -846,16 +1027,16 @@
                                 <div class="card-header py-3 primary-bg" id="heading-1-3" data-toggle="collapse"
                                     role="button" data-target="#collapse-1-3" aria-expanded="false"
                                     aria-controls="collapse-1-3">
-                                    <h6 class="mb-0 text-white"><span class="mr-3 color-secondary">03</span> What
-                                        security measures protect my data?
+                                    <h6 class="mb-0 text-white"><span class="mr-3 color-secondary">03</span> Can
+                                        multiple employees use the system?
                                     </h6>
                                 </div>
                                 <div id="collapse-1-3" class="collapse" aria-labelledby="heading-1-3"
                                     data-parent="#accordion-1">
                                     <div class="card-body">
-                                        <p>We use bank-level 256-bit encryption, two-factor authentication, and never
-                                            store your brokerage login credentials. Your data remains secure with
-                                            regular security audits and SOC 2 compliance.</p>
+                                        <p>Absolutely. SmartStocks supports multi-user access with role-based
+                                            permissions. You can set different access levels for cashiers, managers, and
+                                            administrators.</p>
                                     </div>
                                 </div>
                             </div>
@@ -864,16 +1045,34 @@
                                 <div class="card-header py-3 primary-bg" id="heading-1-4" data-toggle="collapse"
                                     role="button" data-target="#collapse-1-4" aria-expanded="false"
                                     aria-controls="collapse-1-4">
-                                    <h6 class="mb-0 text-white"><span class="mr-3 color-secondary">04</span> Can I try
-                                        SmartStocks before purchasing?
+                                    <h6 class="mb-0 text-white"><span class="mr-3 color-secondary">04</span> What
+                                        hardware do I need to use SmartStocks?
                                     </h6>
                                 </div>
                                 <div id="collapse-1-4" class="collapse" aria-labelledby="heading-1-4"
                                     data-parent="#accordion-1">
                                     <div class="card-body">
-                                        <p>Yes! We offer a 14-day free trial with full access to all features. No credit
-                                            card required. After the trial, you can choose from our flexible
-                                            subscription plans.</p>
+                                        <p>SmartStocks runs on Windows, macOS, and Linux systems with minimum 4GB RAM.
+                                            For retail use, we recommend adding a barcode scanner and receipt printer
+                                            (both optional).</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Accordion card 5 -->
+                            <div class="card">
+                                <div class="card-header py-3 primary-bg" id="heading-1-5" data-toggle="collapse"
+                                    role="button" data-target="#collapse-1-5" aria-expanded="false"
+                                    aria-controls="collapse-1-5">
+                                    <h6 class="mb-0 text-white"><span class="mr-3 color-secondary">05</span> Is training
+                                        included with purchase?
+                                    </h6>
+                                </div>
+                                <div id="collapse-1-5" class="collapse" aria-labelledby="heading-1-5"
+                                    data-parent="#accordion-1">
+                                    <div class="card-body">
+                                        <p>Yes, we provide comprehensive video tutorials and documentation. For
+                                            businesses in Cameroon, we also offer in-person training sessions in major
+                                            cities.</p>
                                     </div>
                                 </div>
                             </div>
@@ -884,69 +1083,93 @@
         </section>
         <!--faq section end-->
 
+
         <!--contact us section start-->
-        <section id="contact" class="contact-us gray-light-bg ptb-100">
+        <section id="contact" class="contact-us ptb-100" style="background-color: #f8f9fa;">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-5">
-                        <div class="section-heading">
-                            <h3>Contact Our Cameroon Team</h3>
-                            <p>Get in touch with our Northwest regional office in Bamenda. Our local support team
-                                understands the unique needs of investors in Cameroon and is ready to assist you.</p>
-                        </div>
-                        <div class="footer-address pt-4">
-                            <h6><strong>Bamenda Office</strong></h6>
-                            <p>Commercial Avenue, Bamenda<br>Northwest Region, Cameroon</p>
-                            <ul>
-                                <li><span>Phone: +237 6 55 12 34 56</span></li>
-                                <li><span>WhatsApp: +237 6 77 89 01 23</span></li>
-                                <li><span>Email: <a
-                                            href="mailto:cm.support@smartstocks.com">cm.support@smartstocks.com</a></span>
-                                </li>
-                                <li><span>Hours: Monday-Friday, 8:30AM-5:30PM (WAT)</span></li>
-                            </ul>
-                        </div>
-                        <div class="pt-4">
-                            <h6><strong>Regional Manager</strong></h6>
-                            <p>For institutional clients and partnership inquiries:</p>
-                            <ul>
-                                <li><span>Mr. Ndifor Emmanuel</span></li>
-                                <li><span>Email: <a
-                                            href="mailto:cm.manager@smartstocks.com">cm.manager@smartstocks.com</a></span>
-                                </li>
-                                <li><span>Phone: +237 6 99 45 67 89</span></li>
-                            </ul>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="section-heading text-center mb-5">
+                            <h2>Contact Our <span>Support Team</span></h2>
+                            <p class="lead">Get in touch with our local experts for personalized assistance with
+                                SmartStocks inventory management</p>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                </div>
+                <div class="row bg-white shadow rounded-lg overflow-hidden" data-aos="fade-in" data-aos-duration="1000">
+                    <div class="col-lg-5 p-5" style="background-color: #d40f23;">
+                        <div class="contact-info text-white">
+                            <h4 class="text-white mb-4">Cameroon Office</h4>
+                            <div class="media mb-4">
+                                <span class="ti-location-pin icon-md mr-3"></span>
+                                <div class="media-body">
+                                    <p class="mb-0">Commercial Avenue, Bamenda<br>Northwest Region, Cameroon</p>
+                                </div>
+                            </div>
+                            <div class="media mb-4">
+                                <span class="ti-mobile icon-md mr-3"></span>
+                                <div class="media-body">
+                                    <p class="mb-0">+237 6 55 12 34 56<br>+237 6 77 89 01 23 (WhatsApp)</p>
+                                </div>
+                            </div>
+                            <div class="media mb-4">
+                                <span class="ti-email icon-md mr-3"></span>
+                                <div class="media-body">
+                                    <p class="mb-0">cm.support@smartstocks.com</p>
+                                </div>
+                            </div>
+                            <div class="media mb-4">
+                                <span class="ti-time icon-md mr-3"></span>
+                                <div class="media-body">
+                                    <p class="mb-0">Monday-Friday: 8:30AM-5:30PM (WAT)</p>
+                                </div>
+                            </div>
+
+                            <hr class="border-light my-4">
+
+                            <h5 class="text-white mb-3">Regional Manager</h5>
+                            <div class="media">
+                                <span class="ti-user icon-md mr-3"></span>
+                                <div class="media-body">
+                                    <p class="mb-1">Mr. Ndifor Emmanuel</p>
+                                    <p class="mb-0">cm.manager@smartstocks.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 p-5">
                         <form action="#" method="POST" id="contactForm1" class="contact-us-form"
                             novalidate="novalidate">
-                            <h5>Send Us a Message</h5>
+                            <h4 class="mb-4">Send Us a Message</h4>
                             <div class="row">
-                                <div class="col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="name" placeholder="Your Full Name"
-                                            required>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <label class="form-label">Full Name</label>
+                                        <input type="text" class="form-control form-control-lg" name="name"
+                                            placeholder="Your name" required>
                                     </div>
                                 </div>
-                                <div class="col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" name="email"
-                                            placeholder="Email Address" required>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <label class="form-label">Email Address</label>
+                                        <input type="email" class="form-control form-control-lg" name="email"
+                                            placeholder="Your email" required>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <input type="tel" name="phone" class="form-control" placeholder="Phone/WhatsApp"
-                                            required>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <label class="form-label">Phone/WhatsApp</label>
+                                        <input type="tel" name="phone" class="form-control form-control-lg"
+                                            placeholder="Your contact number" required>
                                     </div>
                                 </div>
-                                <div class="col-sm-6 col-12">
-                                    <div class="form-group">
-                                        <select class="form-control" name="inquiry_type" required>
-                                            <option value="">Select Inquiry Type</option>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <label class="form-label">Inquiry Type</label>
+                                        <select class="form-select form-control-lg" name="inquiry_type" required>
+                                            <option value="">Select inquiry type</option>
                                             <option value="account">Account Support</option>
                                             <option value="technical">Technical Issues</option>
                                             <option value="partnership">Business Partnership</option>
@@ -955,107 +1178,163 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <textarea name="message" class="form-control" rows="7"
-                                            placeholder="Your message..." required></textarea>
-                                    </div>
-                                </div>
+                            <div class="form-group mb-4">
+                                <label class="form-label">Your Message</label>
+                                <textarea name="message" class="form-control form-control-lg" rows="5"
+                                    placeholder="How can we help you?" required></textarea>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12 mt-3">
-                                    <button type="submit" class="btn secondary-btn" id="btnContactUs">
-                                        Send Message
-                                    </button>
-                                </div>
-                            </div>
+                            <button type="submit" class="btn btn-danger btn-lg px-5" id="btnContactUs">
+                                Send Message <span class="ti-arrow-right ml-2"></span>
+                            </button>
                         </form>
-                        <p class="form-message"></p>
+                        <p class="form-message mt-3"></p>
                     </div>
                 </div>
             </div>
         </section>
         <!--contact us section end-->
 
-  <!--subscribe section start-->
-<section class="subscribe-section ptb-100">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="section-heading text-center mb-4">
-                    <h2>Get Market Insights <span>Subscribe</span> Now</h2>
-                    <p class="lead">
-                        Join our newsletter for exclusive investment tips, market analysis, and SmartStocks updates delivered to your inbox weekly.
-                    </p>
-                </div>
-                <form action="#" method="post" class="subscribe-form subscribe-form-footer w-75 m-auto">
-                    <div class="d-flex align-items-center">
-                        <input type="email" class="form-control input" id="email-footer" name="email"
-                            placeholder="your@email.com" required>
-                        <input type="submit" class="button btn secondary-btn" id="submit-footer"
-                            value="Subscribe Free">
+
+
+        <!--subscribe section start-->
+        <section class="subscribe-section ptb-100">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="section-heading text-center mb-4">
+                            <h2>Get Market Insights <span>Subscribe</span> Now</h2>
+                            <p class="lead">
+                                Join our newsletter for exclusive investment tips, market analysis, and SmartStocks
+                                updates delivered to your inbox weekly.
+                            </p>
+                        </div>
+                        <form action="#" method="post" class="subscribe-form subscribe-form-footer w-75 m-auto">
+                            <div class="d-flex align-items-center">
+                                <input type="email" class="form-control input" id="email-footer" name="email"
+                                    placeholder="your@email.com" required>
+                                <input type="submit" class="button btn secondary-btn" id="submit-footer"
+                                    value="Subscribe Free">
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
-<!--subscribe section end-->
+        </section>
+        <!--subscribe section end-->
 
     </div>
     <!--body content wrap end-->
 
     <!--footer section start-->
-    <footer class="footer-section">
+    <footer class="footer-section w-100"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('img/istockphoto.jpg') no-repeat center center/cover;">
 
         <!--footer top start-->
-        <div class="footer-top primary-bg">
+        <div class="footer-top pt-5 pb-4">
             <div class="container">
-                <div class="row justify-content-around">
-                    <div class="col-lg-4 mb-3 mb-lg-0">
-                        <div class="footer-nav-wrap text-white">
-
-                            <a class="navbar-brand mb-3" href="index.html"><img src="img/logo.png" width="40" alt="logo"
-                                    class="img-fluid">
-                                <span style="color: rgb(230, 16, 16);" class="h3 fw-bold">Smart</span><SPan
-                                    class="h3 text-white">stocks</SPan>
+                <div class="row">
+                    <!-- Company Info -->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                        <div class="footer-nav-wrap">
+                            <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                                <img src="img/logo.png" width="45" alt="SmartStocks Logo"
+                                    class="img-fluid me-2 animation-one">
+                                <span class="h4 fw-bold" style="color: #dc3545;">Smart</span>
+                                <span class="h4 text-white">Stocks</span>
                             </a>
-
-                            <p>Holisticly empower premium architectures without value-added ideas. Seamlessly evolve
-                                cross-platform experiences.</p>
+                            <p class="text-light opacity-75 mb-4">Advanced inventory management software for retailers,
+                                wholesalers, and restaurants. Streamline your operations with our powerful tools.</p>
 
                             <div class="social-list-wrap">
+                                <h6 class="text-white mb-3">Connect With Us</h6>
                                 <ul class="social-list list-inline list-unstyled">
-                                    <li class="list-inline-item"><a href="#" target="_blank" title="Facebook"><span
-                                                class="ti-facebook"></span></a></li>
-                                    <li class="list-inline-item"><a href="#" target="_blank" title="Twitter"><span
-                                                class="ti-twitter"></span></a></li>
-                                    <li class="list-inline-item"><a href="#" target="_blank" title="Instagram"><span
-                                                class="ti-instagram"></span></a>
+                                    <li class="list-inline-item me-2">
+                                        <a href="#" class="social-icon" target="_blank" title="Facebook">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
                                     </li>
-                                    <li class="list-inline-item"><a href="#" target="_blank" title="printerst"><span
-                                                class="ti-pinterest"></span></a>
+                                    <li class="list-inline-item me-2">
+                                        <a href="#" class="social-icon" target="_blank" title="Twitter">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item me-2">
+                                        <a href="#" class="social-icon" target="_blank" title="Instagram">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item me-2">
+                                        <a href="#" class="social-icon" target="_blank" title="LinkedIn">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="social-icon" target="_blank" title="YouTube">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 ml-auto mb-4 mb-lg-0">
-                        <div class="footer-nav-wrap text-white">
-                            <h5 class="mb-3 text-white">Others Links</h5>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><a href="#">About Us</a></li>
-                                <li class="mb-2"><a href="#">Contact Us</a></li>
-                                <li class="mb-2"><a href="#">Privacy Policy</a></li>
-                                <li class="mb-2"><a href="#">Terms and Conditions</a></li>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <div class="footer-nav-wrap">
+                            <h5 class="text-white mb-4 position-relative pb-2">Quick Links</h5>
+                            <ul class="footer-links list-unstyled">
+                                <li class="mb-2"><a href="about.html" class="text-light opacity-75">About Us</a></li>
+                                <li class="mb-2"><a href="features.html" class="text-light opacity-75">Features</a></li>
+                                <li class="mb-2"><a href="pricing.html" class="text-light opacity-75">Pricing</a></li>
+                                <li class="mb-2"><a href="blog.html" class="text-light opacity-75">Blog</a></li>
+                                <li class="mb-2"><a href="contact.html" class="text-light opacity-75">Contact</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3">
-                        <div class="footer-nav-wrap text-white">
-                            <h5 class="mb-3 text-white">Location</h5>
-                            <img src="img/map.png" alt="location map" class="img-fluid">
+
+                    <!-- Support -->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <div class="footer-nav-wrap">
+                            <h5 class="text-white mb-4 position-relative pb-2">Resources</h5>
+                            <ul class="footer-links list-unstyled">
+                                <li class="mb-2"><a href="help-center.html" class="text-light opacity-75"><i
+                                            class="fas fa-question-circle me-2"></i>Help Center</a></li>
+                                <li class="mb-2"><a href="documentation.html" class="text-light opacity-75"><i
+                                            class="fas fa-book me-2"></i>Documentation</a></li>
+                                <li class="mb-2"><a href="tutorials.html" class="text-light opacity-75"><i
+                                            class="fas fa-video me-2"></i>Video Tutorials</a></li>
+                                <li class="mb-2"><a href="api.html" class="text-light opacity-75"><i
+                                            class="fas fa-code me-2"></i>API</a></li>
+                                <li class="mb-2"><a href="status.html" class="text-light opacity-75"><i
+                                            class="fas fa-server me-2"></i>System Status</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-nav-wrap">
+                            <h5 class="text-white mb-4 position-relative pb-2">Contact Us</h5>
+                            <ul class="footer-contact list-unstyled">
+                                <li class="mb-3 d-flex align-items-start">
+                                    <i class="fas fa-map-marker-alt mt-1 me-2"></i>
+                                    <span class="text-light opacity-75">Commercial Avenue, Bamenda, Northwest Region,
+                                        Cameroon</span>
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="fas fa-envelope mt-1 me-2"></i>
+                                    <a href="mailto:support@smartstocks.com"
+                                        class="text-light opacity-75">support@smartstocks.com</a>
+                                </li>
+                                <li class="mb-3 d-flex align-items-center">
+                                    <i class="fas fa-phone-alt mt-1 me-2"></i>
+                                    <a href="tel:+237655123456" class="text-light opacity-75">+237 6 55 12 34 56</a>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <i class="far fa-clock mt-1 me-2"></i>
+                                    <span class="text-light opacity-75">Mon-Fri: 8:30AM-5:30PM (WAT)</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1063,8 +1342,34 @@
         </div>
         <!--footer top end-->
 
+        <!--footer bottom start-->
+        <div class="footer-bottom py-3" style="background-color: rgba(0,0,0,0.3);">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        <p class="mb-0 small text-light opacity-75">© 2023 SmartStocks. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <ul class="legal-links list-inline mb-0 small">
+                            <li class="list-inline-item"><a href="privacy.html" class="text-light opacity-75">Privacy
+                                    Policy</a></li>
+                            <li class="list-inline-item mx-1">•</li>
+                            <li class="list-inline-item"><a href="terms.html" class="text-light opacity-75">Terms of
+                                    Service</a></li>
+                            <li class="list-inline-item mx-1">•</li>
+                            <li class="list-inline-item"><a href="cookies.html" class="text-light opacity-75">Cookie
+                                    Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--footer bottom end-->
     </footer>
     <!--footer section end-->
+
+    <!-- Font Awesome for modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!--jQuery-->
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -1084,6 +1389,30 @@
     <script src="js/owl.carousel.min.js"></script>
     <!--custom js-->
     <script src="js/scripts.js"></script>
+    <!-- Scripts at bottom of body -->
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+
+        // Custom fade in effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+
+            const fadeInOnScroll = () => {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    if (elementTop < window.innerHeight - 100) {
+                        element.classList.add('show');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', fadeInOnScroll);
+            fadeInOnScroll(); // Run once on load
+        });
+    </script>
 </body>
 
 <!-- Mirrored from prolex.themetags.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Jun 2025 15:24:21 GMT -->
