@@ -116,6 +116,13 @@
     left: calc(50% - 20px);
     animation: pulse 1.5s infinite alternate 1s;
   }
+  .smart {
+     background: #ff07ac;
+    left: 0;
+    bottom: calc(50% - 50px);
+    animation: pulse 1.5s infinite alternate 1.5s;
+
+  }
   
   .center-logo {
     position: absolute;
@@ -213,6 +220,12 @@
     </style>
 
     <style>
+            .status {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+        
         .footer-section {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #fff;
@@ -302,6 +315,7 @@
             border-color: #fff;
         }
     </style>
+    
 </head>
 
 <body>
@@ -425,9 +439,10 @@
                             <div class="mt-4">
                                 <!-- <a href="#download" class="btn download-now-btn mr-3">Download Now</a>
                                 <a href="#features" class="btn secondary-btn">See How It Works</a> -->
-                                <a href="#" class="btn app-store-btn w-50"><span class="ti-download"></span> Download
-                                    Software</a>
+                                 <button id="downloadBtn" class="btn app-store-btn w-50"><span class="ti-download"></span> Download
+                                    Software  </button>
 
+        <p id="status" class="status">Click the button to download</p>
                             </div>
                         </div>
                     </div>
@@ -1453,10 +1468,11 @@
       <div class="icon stock"></div>
       <div class="icon chart"></div>
       <div class="icon money"></div>
-            <div class="icon smart"></div>
 
       <div class="center-logo"><img src="img/logo.png"  alt="logo"
                         class="img-fluid animation-one"></div>
+                      <div class="icon smart"></div>
+              
     </div>
   </div>
 </div>
@@ -1507,7 +1523,45 @@
         });
     </script>
 
-    
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const statusElement = document.getElementById('status');
+            statusElement.textContent = "Preparing download...";
+            
+            // Extract file ID from your Google Drive link
+            const fileId = '13HJw28aQa1zbVzNs8eChmmRmxox9FcJo';
+            
+            // Create the direct download link
+            const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+            
+            // Create a temporary anchor element
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+            
+            // This makes the download start automatically when the link is clicked
+            link.setAttribute('download', '');
+            
+            // For better user experience, we can suggest a filename
+            // You can change 'downloaded_file' to your preferred filename with extension
+            link.setAttribute('download', 'smartstocks_data.file');
+            
+            // Append to the document
+            document.body.appendChild(link);
+            
+            // Trigger the click
+            link.click();
+            
+            // Clean up
+            document.body.removeChild(link);
+            
+            statusElement.textContent = "Download started! Check your downloads folder.";
+            
+            // Reset status after 3 seconds
+            setTimeout(() => {
+                statusElement.textContent = "Download complete!";
+            }, 3000);
+        });
+    </script>
 <script>
   window.addEventListener('load', function() {
     document.body.classList.add('loaded');
