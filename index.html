@@ -56,7 +56,6 @@
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    
 <style>
   #preloader {
     position: fixed;
@@ -64,85 +63,84 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #1a2a3a; /* Dark blue background */
+    background: #f8f9fa;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    transition: opacity 0.8s ease-out;
   }
   
-  .stock-loader {
-    width: 300px;
-    text-align: center;
-  }
-  
-  .chart-line {
-    height: 2px;
-    background: rgba(255, 255, 255, 0.1);
-    margin: 15px 0;
+  .finance-loader {
+    width: 200px;
+    height: 200px;
     position: relative;
-    overflow: hidden;
   }
   
-  .chart-line:before {
-    content: '';
-    position: absolute;
-    height: 100%;
+  .orbit {
     width: 100%;
-    background: linear-gradient(90deg, transparent, #4CAF50, transparent);
-    animation: chartAnimation 2.5s infinite;
-  }
-  
-  .chart-line:nth-child(2):before {
-    animation-delay: 0.3s;
-    background: linear-gradient(90deg, transparent, #2196F3, transparent);
-  }
-  
-  .chart-line:nth-child(3):before {
-    animation-delay: 0.6s;
-    background: linear-gradient(90deg, transparent, #FFC107, transparent);
-  }
-  
-  @keyframes chartAnimation {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-  }
-  
-  .company-logo {
-    color: white;
-    font-size: 28px;
-    font-weight: 700;
-    margin: 30px 0;
-    font-family: 'Arial', sans-serif;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-  }
-  
-  .progress-bar {
-    height: 4px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-  
-  .progress-bar:after {
-    content: '';
-    display: block;
     height: 100%;
-    width: 0;
-    background: linear-gradient(90deg, #4CAF50, #8BC34A);
-    animation: progressAnimation 2s infinite ease-in-out;
+    position: relative;
+    animation: rotate 8s linear infinite;
   }
   
-  @keyframes progressAnimation {
-    0% { width: 0; }
-    50% { width: 100%; }
-    100% { width: 0; right: 0; left: auto; }
+  .icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .stock {
+    background: #4CAF50;
+    top: 0;
+    left: calc(50% - 20px);
+    animation: pulse 1.5s infinite alternate;
+  }
+  
+  .chart {
+    background: #2196F3;
+    right: 0;
+    top: calc(50% - 20px);
+    animation: pulse 1.5s infinite alternate 0.5s;
+  }
+  
+  .money {
+    background: #FFC107;
+    bottom: 0;
+    left: calc(50% - 20px);
+    animation: pulse 1.5s infinite alternate 1s;
+  }
+  
+  .center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
   }
   
   body.loaded #preloader {
     opacity: 0;
     visibility: hidden;
+    transition: opacity 0.8s, visibility 0s 0.8s;
   }
 </style>
 
@@ -1449,16 +1447,17 @@
         <!--footer bottom end-->
     </footer>
     <!--footer section end-->
-
-    <div id="preloader">
-        <div class="stock-loader">
-            <div class="chart-line"></div>
-            <div class="chart-line"></div>
-            <div class="chart-line"></div>
-            <div class="company-logo">SmartStocks</div>
-            <div class="progress-bar"></div>
-        </div>
+<div id="preloader">
+  <div class="finance-loader">
+    <div class="orbit">
+      <div class="icon stock"></div>
+      <div class="icon chart"></div>
+      <div class="icon money"></div>
+      <div class="center-logo"><img src="img/logo.png"  alt="logo"
+                        class="img-fluid animation-one"></div>
     </div>
+  </div>
+</div>
 
     <!-- Font Awesome for modern icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
