@@ -56,6 +56,95 @@
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    
+<style>
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1a2a3a; /* Dark blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease-out;
+  }
+  
+  .stock-loader {
+    width: 300px;
+    text-align: center;
+  }
+  
+  .chart-line {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 15px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .chart-line:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, #4CAF50, transparent);
+    animation: chartAnimation 2.5s infinite;
+  }
+  
+  .chart-line:nth-child(2):before {
+    animation-delay: 0.3s;
+    background: linear-gradient(90deg, transparent, #2196F3, transparent);
+  }
+  
+  .chart-line:nth-child(3):before {
+    animation-delay: 0.6s;
+    background: linear-gradient(90deg, transparent, #FFC107, transparent);
+  }
+  
+  @keyframes chartAnimation {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  .company-logo {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 30px 0;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  
+  .progress-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  
+  .progress-bar:after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    animation: progressAnimation 2s infinite ease-in-out;
+  }
+  
+  @keyframes progressAnimation {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; right: 0; left: auto; }
+  }
+  
+  body.loaded #preloader {
+    opacity: 0;
+    visibility: hidden;
+  }
+</style>
 
 
     <style>
@@ -218,10 +307,12 @@
 </head>
 
 <body>
-<!-- Scroll to Top Button -->
-<button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-</button>
+
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <!--header section start-->
     <header class="header">
         <!--start navbar-->
@@ -275,7 +366,7 @@
         <section class="hero-section ptb-100 background-img "
             style="background: url('img/hero-bg-3.jpg')no-repeat center center / cover">
             <div class="container">
-                
+
                 <!--animated circle shape start-->
                 <div class="circles">
                     <div class="point animated-point-1"></div>
@@ -1359,6 +1450,16 @@
     </footer>
     <!--footer section end-->
 
+    <div id="preloader">
+        <div class="stock-loader">
+            <div class="chart-line"></div>
+            <div class="chart-line"></div>
+            <div class="chart-line"></div>
+            <div class="company-logo">SmartStocks</div>
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
     <!-- Font Awesome for modern icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -1404,6 +1505,17 @@
             fadeInOnScroll(); // Run once on load
         });
     </script>
+
+    
+<script>
+  window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+    setTimeout(function() {
+      const preloader = document.getElementById('preloader');
+      if (preloader) preloader.remove();
+    }, 800);
+  });
+</script>
 </body>
 
 <!-- Mirrored from prolex.themetags.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Jun 2025 15:24:21 GMT -->
