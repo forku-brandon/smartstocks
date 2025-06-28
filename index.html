@@ -56,6 +56,100 @@
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+<style>
+  #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .finance-loader {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+  
+  .orbit {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: rotate 8s linear infinite;
+  }
+  
+  .icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .stock {
+    background: #4CAF50;
+    top: 0;
+    left: calc(50% - 20px);
+    animation: pulse 1.5s infinite alternate;
+  }
+  
+  .chart {
+    background: #2196F3;
+    right: 0;
+    top: calc(50% - 20px);
+    animation: pulse 1.5s infinite alternate 0.5s;
+  }
+  
+  .money {
+    background: #FFC107;
+    bottom: 0;
+    left: calc(50% - 20px);
+    animation: pulse 1.5s infinite alternate 1s;
+  }
+  .smart {
+     background: #ff07ac;
+    left: 0;
+    bottom: calc(50% - 50px);
+    animation: pulse 1.5s infinite alternate 1.5s;
+
+  }
+  
+  .center-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+  }
+  
+  body.loaded #preloader {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s, visibility 0s 0.8s;
+  }
+</style>
 
 
     <style>
@@ -126,6 +220,12 @@
     </style>
 
     <style>
+            .status {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+        
         .footer-section {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #fff;
@@ -215,13 +315,16 @@
             border-color: #fff;
         }
     </style>
+    
 </head>
 
 <body>
-<!-- Scroll to Top Button -->
-<button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-</button>
+
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <!--header section start-->
     <header class="header">
         <!--start navbar-->
@@ -241,20 +344,8 @@
 
                 <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link page-scroll dropdown-toggle" href="#" id="navbarDropdownHome"
-                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Home
-                            </a>
-                            <div class="dropdown-menu submenu" aria-labelledby="navbarDropdownHome">
-                                <a class="dropdown-item" href="index.html">Demo Template 1</a>
-                                <a class="dropdown-item" href="index-2.html">Demo Template 2</a>
-                                <a class="dropdown-item" href="index-3.html">Demo Template 3</a>
-                                <a class="dropdown-item" href="index-4.html">Demo Template 4</a>
-                                <a class="dropdown-item" href="index-5.html">Demo Template 5</a>
-                                <a class="dropdown-item" href="index-6.html">Demo Template 6</a>
-                                <a class="dropdown-item" href="index-7.html">Demo Template 7</a>
-                            </div>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link page-scroll" href="#features">Features</a>
@@ -287,7 +378,7 @@
         <section class="hero-section ptb-100 background-img "
             style="background: url('img/hero-bg-3.jpg')no-repeat center center / cover">
             <div class="container">
-                
+
                 <!--animated circle shape start-->
                 <div class="circles">
                     <div class="point animated-point-1"></div>
@@ -348,9 +439,10 @@
                             <div class="mt-4">
                                 <!-- <a href="#download" class="btn download-now-btn mr-3">Download Now</a>
                                 <a href="#features" class="btn secondary-btn">See How It Works</a> -->
-                                <a href="#" class="btn app-store-btn w-50"><span class="ti-download"></span> Download
-                                    Software</a>
+                                 <button id="downloadBtn" class="btn app-store-btn w-50"><span class="ti-download"></span> Download
+                                    Software  </button>
 
+        <p id="status" class="status">Click the button to download</p>
                             </div>
                         </div>
                     </div>
@@ -1370,6 +1462,20 @@
         <!--footer bottom end-->
     </footer>
     <!--footer section end-->
+<div id="preloader">
+  <div class="finance-loader">
+    <div class="orbit">
+      <div class="icon stock"></div>
+      <div class="icon chart"></div>
+      <div class="icon money"></div>
+
+      <div class="center-logo"><img src="img/logo.png"  alt="logo"
+                        class="img-fluid animation-one"></div>
+                      <div class="icon smart"></div>
+              
+    </div>
+  </div>
+</div>
 
     <!-- Font Awesome for modern icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -1416,6 +1522,55 @@
             fadeInOnScroll(); // Run once on load
         });
     </script>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const statusElement = document.getElementById('status');
+            statusElement.textContent = "Preparing download...";
+            
+            // Extract file ID from your Google Drive link
+            const fileId = '13HJw28aQa1zbVzNs8eChmmRmxox9FcJo';
+            
+            // Create the direct download link
+            const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+            
+            // Create a temporary anchor element
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+            
+            // This makes the download start automatically when the link is clicked
+            link.setAttribute('download', '');
+            
+            // For better user experience, we can suggest a filename
+            // You can change 'downloaded_file' to your preferred filename with extension
+            link.setAttribute('download', 'smartstocks_data.file');
+            
+            // Append to the document
+            document.body.appendChild(link);
+            
+            // Trigger the click
+            link.click();
+            
+            // Clean up
+            document.body.removeChild(link);
+            
+            statusElement.textContent = "Download started! Check your downloads folder.";
+            
+            // Reset status after 3 seconds
+            setTimeout(() => {
+                statusElement.textContent = "Download complete!";
+            }, 3000);
+        });
+    </script>
+<script>
+  window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+    setTimeout(function() {
+      const preloader = document.getElementById('preloader');
+      if (preloader) preloader.remove();
+    }, 800);
+  });
+</script>
 </body>
 
 <!-- Mirrored from prolex.themetags.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 07 Jun 2025 15:24:21 GMT -->
