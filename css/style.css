@@ -2620,3 +2620,9 @@ blockquote:before {
     .scroll-to-top:hover i {
         transform: translateY(-2px);
     }
+
+
+    html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
